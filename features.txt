@@ -1,0 +1,22 @@
+We decided to incorporate sound effects onto our basic game. The file 'app.py' initializes the four sounds utilized
+in the code under
+the attribute names _pewSound, _pewSound2, _blastSound, _popSound. We directly called the Sound class in the appropriate
+locations whenever a bolt was fired from a player, a bolt was fired from an alien, a bolt collided with a ship, or a bolt
+collided with an alien. In order to turn the sound on and off, we created a getter and setter for the sound to allow
+app.py to access wave.py. For all sounds except the sound of the ship shooting bolts, a new attribute, _sound,
+was added with precondition that it has to be a bool in order to control the sound
+in wave.py. If Wave._sound was set to True, all of the sounds were turned on. If Wave._sound was set to False, the
+sounds were turned off.
+Because the sound of the ship shooting bolts was handled directly in the 'app.py' file, a new attribute, _list, was
+added into the
+app.py file. Invaders._list adds True into the list every time the code runs inside the conditional statements in the
+helper function, soundControl. If there is an odd number of Trues in the list, the sound is turned off. If there
+is an even number of Trues in the list, the sound is turned off.
+The sounds are turned off by pressing "p" and turned on by pressing "o".
+Note: the Wave._sound was set to True by default.
+Also, we allow the player to pause the game during a wave by pressing "q".
+Furthermore, even though we do not have a point tracking system, we allow the user to continue playing or play again
+if they win or lose.
+Moreover, every time the player loses a life, the pause state states how many lives the player has left
+Additionally, we made the background of the game black and the text green.
+Finally we added a control menu.
